@@ -1,0 +1,81 @@
+@import 'src/varibles.scss';
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.217111);
+  border-radius: 4px;
+  margin: 30px auto 25px auto;
+  width: $width_inner_container ;
+  max-width: 100%;
+
+  form {
+    flex-wrap: wrap;
+  }
+
+  input{
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.35px;
+    
+    &::placeholder {
+      color: #505050;
+    }
+    
+    @include for-size($md5) {
+      width: 110px!important;
+    }
+
+    @include for-size($md6) {
+      width: 80px!important;
+    }
+  }
+}
+
+.selectCategory {
+  @include for-size($md5) {
+    width: 100%;
+  }
+}
+
+.item, .selectCategory {
+  margin: 12px;
+
+  @include for-size($md5) {
+    margin: 8px;
+  }
+}
+
+.range {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+  
+  .item {
+    flex: 0 0 calc(50% - 36px);
+  
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    @include for-size($md5) {
+      flex: 0 0 calc(50% - 28px);
+    }
+  }
+
+  &::before {
+    content: '';
+    width: 12px;
+    height: 1px;
+    background-color: #DEDEE0;
+    margin: 0 -5px;
+    order: 1;
+  }
+
+  @include for-size($md5) {
+    width: 100%;
+    justify-content: space-around;
+  }
+}

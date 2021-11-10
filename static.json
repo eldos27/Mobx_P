@@ -1,0 +1,11 @@
+{
+	"root": "build/",
+	"proxies": {
+		"/api": {
+		  "origin": "https://apiko-intensive-backend.herokuapp.com/"
+		}
+	},
+	"routes": {
+		"/**": "index.html"
+	}
+}

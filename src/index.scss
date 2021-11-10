@@ -1,0 +1,79 @@
+@import 'varibles';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica;
+  color: $color_main_text;
+  background: $color_main_background;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: $color_main_primary;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: center;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: .7;
+    cursor: default;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: $width_container;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include for-size($md5) {
+    padding: 0 10px;
+  }
+}
+
+.not-found {
+  font-size: 16px;
+  font-weight: bold;
+  margin: auto;
+}

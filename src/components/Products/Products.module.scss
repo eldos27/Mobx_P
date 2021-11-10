@@ -1,0 +1,13 @@
+@import 'src/varibles.scss';
+
+.container {
+  margin: 0 auto;
+  width: $width_inner_container;
+  max-width: 100%;
+}
+
+.items {
+  margin: 0 -3px;
+  display: flex;
+  flex-wrap: wrap;
+}

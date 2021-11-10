@@ -1,0 +1,17 @@
+$color_main_background: #F8F8F8;
+$color_main_text: #282828;
+$color_main_primary: #349A89;
+
+$width_container: 1200px;
+$width_inner_container: 900px;
+
+$md1: 1200px;
+$md2: 1000px;
+$md3: 720px;
+$md4: 650px;
+$md5: 480px;
+$md6: 350px;
+
+@mixin for-size($size) {
+  @media (max-width: $size) { @content; }
+}

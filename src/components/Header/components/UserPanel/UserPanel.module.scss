@@ -1,0 +1,80 @@
+@import 'src/varibles.scss';
+
+.actions {
+  &, ul{
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  @include for-size($md5) {
+    padding-top: 5px;
+  }
+
+  ul {
+    @include for-size($md5) {
+      padding-right: 20px;
+    }
+  }
+
+  li{
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &:not(:last-child) {
+      margin-right: 45px;
+  
+      @include for-size($md5) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  font-family: Helvetica;
+  font-size: 12px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.buttonLogin{
+  display: block;
+  font-size: 14px;
+  line-height: 31px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 0 50px;
+  color: #FFFFFF!important;
+  background: $color_main_primary;
+
+  @include for-size($md5) {
+    padding: 0 15px;
+  }
+}
+
+.buttonSaved {
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:not(.active) {
+    svg {
+      color: transparent;
+      stroke: #FFFFFF;
+      stroke-width: 1.2px;
+      overflow: visible;
+    }
+  }
+
+  &.active {
+    svg {
+      color: inherit;
+    }
+  }
+}

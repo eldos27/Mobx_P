@@ -1,0 +1,85 @@
+@import '../../varibles';
+
+.header {
+  display: flex;
+  padding: 18px;
+  min-height: 75px;
+
+  @include for-size($md3) {
+    padding: 15px 10px;
+  }
+
+  svg, a {
+    color: $color_main_text;
+  }
+
+  &Dark {
+    background: linear-gradient(180deg, #090810 0%, #171236 100%);
+
+    svg, button, a {
+      color:  #FFFFFF;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  max-width: $width_container;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+
+  @include for-size($md5) {
+    padding: 0;
+  }
+}
+
+.logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 310;
+  
+    svg {
+      @include for-size($md3) {
+          max-width: 100px;
+      }
+
+      @include for-size($md6) {
+        max-width: 60px;
+      }
+    }
+
+    &.menuActive {
+      top: 15px;
+      left: 10px;
+      position: fixed;
+    }
+}
+
+
+.content {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+
+  @include for-size($md4) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.897);
+    z-index: 300;
+    transform: translateY(-120%);
+    transition: transform 0.3s;
+    box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.5);
+
+    &.active {
+      transform: translateY(0);
+    }
+  }
+}

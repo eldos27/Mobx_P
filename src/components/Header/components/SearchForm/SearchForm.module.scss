@@ -1,0 +1,45 @@
+@import 'src/varibles.scss';
+
+.container {
+  width: 100%;
+  margin: 40px auto 0 auto;
+  max-width: $width_inner_container;
+
+  @include for-size($md5) {
+    margin: 15px auto 0 auto;
+  }
+
+  form {
+    margin: 0 -4px;
+    flex-wrap: wrap;
+  }
+
+  :global{
+    .field {
+      margin: 4px;
+      flex-grow: 1.2;
+      flex-basis: 0;
+  
+      &:first-child {
+          flex-grow: 3;
+          
+          @include for-size($md5) {
+            flex-basis: 100%;
+          }
+      }
+
+      .fieldContainer {
+        padding: 15px 16px;
+      }
+  
+      input {
+        padding: 0px 20px;
+      }
+    }
+
+    .submit {
+      margin: 4px;
+      line-height: 50px;
+    }
+  } 
+}

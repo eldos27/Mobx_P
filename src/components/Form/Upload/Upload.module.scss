@@ -1,0 +1,9 @@
+.container {
+  margin-bottom: 18px;
+
+  input {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+}

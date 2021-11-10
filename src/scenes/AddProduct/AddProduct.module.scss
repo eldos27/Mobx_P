@@ -1,0 +1,24 @@
+@import 'src/varibles.scss';
+
+.container {
+  margin-top: 30px;
+
+  form {
+    width: 650px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    :global {
+      .field {
+        margin-top: 16px;
+      }
+      
+      .submit  {
+        margin-top: 30px;
+        max-width: 380px;
+        width: 100%;
+        align-self: center;
+      }
+    }
+  }
+}

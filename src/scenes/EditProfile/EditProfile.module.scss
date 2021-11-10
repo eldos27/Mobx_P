@@ -1,0 +1,28 @@
+@import 'src/varibles.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  max-width: 100%;
+  margin: 35px auto 0 auto;
+
+  :global {
+    .form-container {
+      padding: 35px 58px;
+
+      @include for-size($md5) {
+        padding: 15px 20px;
+      }
+    }
+
+    .field {
+      margin-top: 16px;
+    }
+    
+    .submit {
+      margin-top: 20px;
+    }
+  }
+}

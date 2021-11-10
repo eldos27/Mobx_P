@@ -1,0 +1,16 @@
+.user-info {
+  &, &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .avatar {
+    align-self: center;
+    
+    .round-shape{
+      width: inherit;
+      height: inherit;
+    }
+  }
+}

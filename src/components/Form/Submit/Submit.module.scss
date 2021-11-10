@@ -1,0 +1,25 @@
+@import 'src/varibles.scss';
+
+.submit {
+  padding: 0 50px;
+  border-radius: 5px;
+  line-height: 58px;
+  max-width: 100%;
+  color: #FFFFFF;
+  background: $color_main_primary;
+}
+
+.dark {
+  background: #3E3961;
+  color: #FFFFFF;
+}
+
+.uppercase {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.regular {
+  font-size: 16px;
+  letter-spacing: 0.4px;
+}

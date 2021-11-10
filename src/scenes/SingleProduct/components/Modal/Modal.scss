@@ -1,0 +1,154 @@
+@import 'src/varibles.scss';
+
+.ReactModal__Overlay {
+  background: rgba(0, 0, 0, 0.37)!important;
+}
+
+.ReactModal__Content {
+  width: 850px;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0!important;
+  inset: initial!important;
+  top: 50%!important;
+  left: 50%!important;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 42px rgba(0, 0, 0, 0.3);
+  
+  @include for-size($md3) {
+    height: 100%;
+  }
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 30px 70px ;
+  height: 100%;
+
+  @include for-size($md4) {
+    padding: 30px 15px;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 25px;
+    color: #282828;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 28px;
+    color: #373738;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  &__header {
+    padding-right: 26px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+
+    &:hover {
+      &:before, &:after {
+        background: $color_main_text;
+      }
+    }
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 30%;
+      width: 4px;
+      height: 100%;
+      background: $color_main_primary;
+      border-radius: 4px;
+      transition: .3s;
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__body {
+    margin-top: 30px;
+
+    @include for-size($md3) {
+      margin-top: 50px;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none!important;
+    }
+
+    .user-info {
+      flex-direction: row;
+      margin-top: 16px;
+
+      @include for-size($md3) {
+        margin-top: 30px;
+      }
+
+      .avatar {
+        width: 72px;
+        height: 72px;
+        margin-right: 16px;
+      }
+
+      &__content {
+        text-align: left;
+        justify-content: center;
+      }
+
+      &__name {
+        font-size: 24px;
+        line-height: 28px;
+        color: #2B2B2B;
+      }
+
+      &__location {
+        font-size: 15px;
+        line-height: 17px;
+        color: rgba(43, 43, 43, 0.499918);
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &__form {
+    form {
+      margin-top: 16px;
+      align-items: center;
+
+      @include for-size($md3) {
+        margin-top: 50px;
+      }
+    }
+
+    .submit {
+      width: 375px;
+      margin-top: 4px;
+
+      @include for-size($md3) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  label {
+    cursor: pointer;
+  }
+
+  :global .avatar {
+    width: 100px;
+    height: 100px;
+    align-self: center;
+
+    span {
+      font-size: 28px;
+    }
+  }
+
+  .button {
+    background: #FFFFFF;
+    border: 1px solid #349A89;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #349A89;
+    padding: 4px 7px;
+    transform: translateY(-50%);
+    align-self: center;
+  }
+
+  input {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,12 @@
+@import 'src/varibles.scss';
+
+.footer {
+  text-align: center;
+  background: rgba(192, 196, 206, 0.127321);
+  padding: 25px;
+  margin-top: 80px;
+
+  @include for-size($md5) {
+      margin-top: 35px;
+  }
+}

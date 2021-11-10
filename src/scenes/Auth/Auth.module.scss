@@ -1,0 +1,26 @@
+@import 'src/varibles.scss';
+
+.auth {
+  align-items: center;
+  width: 420px;
+  max-width: 100%;
+  margin: 80px auto 0 auto;
+
+  @include for-size($md5) {
+    margin: 35px auto 0 auto;
+  }
+
+  :global {
+    .field {
+      margin-top: 16px;
+    }
+    
+    .submit {
+      margin-top: 20px;
+    }
+
+    .form-container:nth-child(2) {
+      margin-top: 20px;
+    }
+  }
+}
